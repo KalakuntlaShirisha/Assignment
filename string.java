@@ -3,17 +3,18 @@ package siri;
 import java.util.*;
 
 public class string{
-	String name = "Siri";
+	String name = "siri";
 	String s = "java standard edition";
 	String s1 = "b.v.raju college";
 	String s2 = "welcome to careertuner";
 	String s3 = "careertuner";
 	String s4 =  "career";
+	String s5= "bvrit college";
 	Scanner scan=new Scanner(System.in);
 	public void Charatindex()
 	{
-		System.out.println("Enter the index value:");
-		System.out.println("char at given index:");
+		System.out.println("char at given index");
+		System.out.println("enter the index number:");
 		int a=scan.nextInt();
 		if(a>=0&&a<name.length())
 		{
@@ -24,6 +25,17 @@ public class string{
 			System.out.println("The name has "+name.length()+"characters");
 		}
 		
+	}
+	public void string1stlettercapital()
+	{
+		System.out.println("Given string:"+s);
+		String sub = s.substring(0,1).toUpperCase();
+		String sub0 = s.substring(1,5);
+		String sub1 = s.substring(5,6).toUpperCase();
+		String sub11 = s.substring(6,14);
+		String sub2 = s.substring(14, 15).toUpperCase();
+		String substr = s.substring(15);
+		System.out.println("String after conversion:"+sub+sub0+sub1+sub11+sub2+substr);
 	}
 	public void stringcontains()
 	{
@@ -50,24 +62,33 @@ public class string{
 	}
 	public void stringreplace()
 	{
-		System.out.println("Given string:"+s1);
-		System.out.println("String after converting:"+s1.replace("ll", "lL"));
+		//converting second occurrence of l into L from s1
+		System.out.println("Given string:"+s5);
+		System.out.println("String after converting:"+s5.replace("ll", "lL"));
 		
 	}
 	public void capital()
+
 	{
-		String substr = s1.substring(4, 8);
-		System.out.println(substr.toUpperCase());	
+			System.out.println("given string:"+s1);
+			String sub = s1.substring(4, 8).toUpperCase();
+			String sub1 = s1.substring(0,4);
+			String sub2=s1.substring(8);
+			System.out.println("string after conversion:"+sub1+sub+sub2);
 	}
 	
 public static void main(String[] args) {
 		string obj=new string();
 		obj.Charatindex();
+		obj.string1stlettercapital();
 		obj.stringcontains();
 		obj.stringends();
 		obj.countwords();
 		obj.smalltocapital();
 		obj.stringreplace();
 		obj.capital();
+		
+		
 	}
+
 }
